@@ -36,14 +36,51 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setSubmitted(true);
+  //   setTimeout(() => {
+  //     setSubmitted(false);
+  //     setForm(initialForm);
+  //   }, 4000);
+  // };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch(process.env.NEXT_PUBLIC_N8N_WEBHOOK!,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form), // sends all form data
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to send data");
+    }
+
+    const result = await response.json();
+
+    console.log("Webhook Response:", result);
+
     setSubmitted(true);
+
     setTimeout(() => {
       setSubmitted(false);
       setForm(initialForm);
     }, 4000);
-  };
+
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Failed to submit form.");
+  }
+};
+
+
 
   return (
     <section id="contact" className="py-20 sm:py-28 relative overflow-hidden">
