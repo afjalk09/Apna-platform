@@ -1,65 +1,112 @@
-import Image from "next/image";
+"use client";
+import { useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import TrustMetrics from "@/components/TrustMetrics";
+import Services from "@/components/Services";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import HowItWorks from "@/components/HowItWorks";
+import FeaturedProjects from "@/components/FeaturedProjects";
+import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
+import Contact from "@/components/Contact";
+import ContactInfo from "@/components/ContactInfo";
+import Footer from "@/components/Footer";
+
+function WaveSeparator() {
+  return (
+    <div className="wave-separator -mb-1">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path
+          d="M0,40 C360,80 720,0 1080,40 C1260,60 1350,40 1440,40 L1440,80 L0,80 Z"
+          fill="#F7F7F2"
+        />
+      </svg>
+    </div>
+  );
+}
+
+function WaveSeparatorInverted() {
+  return (
+    <div className="wave-separator -mb-1">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path
+          d="M0,40 C360,0 720,80 1080,40 C1260,20 1350,40 1440,40 L1440,80 L0,80 Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+  );
+}
+
+function SectionWrapper({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  return (
+    <section className={`scroll-section ${className}`}>
+      {children}
+    </section>
+  );
+}
 
 export default function Home() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
+
+    document.querySelectorAll(".scroll-section").forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="bg-[var(--background)] min-h-screen">
+      <Navbar />
+      <Hero />
+
+      <WaveSeparatorInverted />
+      <section className="bg-white">
+        <TrustMetrics />
+      </section>
+      <WaveSeparator />
+
+      <Services />
+
+      <WaveSeparatorInverted />
+      <section className="bg-white">
+        <WhyChooseUs />
+      </section>
+      <WaveSeparator />
+
+      <HowItWorks />
+
+      <WaveSeparatorInverted />
+      <section className="bg-white">
+        <FeaturedProjects />
+      </section>
+      <WaveSeparator />
+
+      <Testimonials />
+
+      <WaveSeparatorInverted />
+      <section className="bg-white">
+        <FAQ />
+      </section>
+      <WaveSeparator />
+
+      <Contact />
+
+      <WaveSeparatorInverted />
+      <section className="bg-white">
+        <ContactInfo />
+      </section>
+
+      <Footer />
+    </main>
   );
 }
