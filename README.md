@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Apna Platform
 
-## Getting Started
+Apna Platform is a student-focused academic assistance platform designed to help students with assignments, presentations, projects, research papers, AI/ML solutions, websites, mobile applications, and academic guidance.
 
-First, run the development server:
+The platform provides a simple and professional interface where students can submit their requirements and connect with experts for personalized assistance.
 
-```bash
+🚀 Features
+📚 Academic Assistance
+Assignment Writing Support
+PPT & Seminar Preparation
+Research Paper Assistance
+Project Documentation
+Viva Preparation Guidance
+💻 Technical Projects
+AI & Machine Learning Projects
+Web Development Projects
+Mobile Application Development
+Final Year Projects
+Automation Solutions
+📩 Contact & Lead Management
+Student Requirement Form
+Real-time Form Submission
+Automated Email Notifications
+Automated Thank You Emails
+n8n Workflow Integration
+🎨 Modern UI/UX
+Fully Responsive Design
+Mobile First Approach
+Modern Educational Theme
+Smooth Animations
+Clean and Professional Layout
+
+🛠️ Tech Stack
+Frontend
+Next.js
+React
+TypeScript
+Tailwind CSS
+Framer Motion
+Lucide React
+Automation
+n8n
+Gmail Integration
+Deployment
+Vercel
+Railway
+
+⚙️ Environment Variables
+
+Create a .env.local file in the root directory:
+
+NEXT_PUBLIC_N8N_WEBHOOK=YOUR_N8N_PRODUCTION_WEBHOOK_URL
+
+Example:
+
+NEXT_PUBLIC_N8N_WEBHOOK=https://your-n8n-instance.up.railway.app/webhook/contact-form
+🔄 Workflow Automation
+Form Submission Flow
+Student Submits Form
+          ↓
+      Next.js
+          ↓
+      n8n Webhook
+          ↓
+     Process Request
+          ↓
+ Send Thank You Email
+          ↓
+ Send Admin Notification
+📧 Automated Emails
+
+The platform automatically:
+
+Student Email
+Sends a thank-you email after submission.
+Confirms receipt of the request.
+Admin Email
+Notifies the platform administrator about new student requests.
+🚀 Installation
+
+Clone the repository:
+
+git clone https://github.com/your-username/apna-platform.git
+
+Navigate to the project:
+
+cd apna-platform
+
+Install dependencies:
+
+npm install
+
+Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
+🌐 Deployment
+Frontend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Deploy on Vercel:
 
-## Learn More
+vercel
+Automation
 
-To learn more about Next.js, take a look at the following resources:
+Deploy n8n on Railway:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Railway
+↓
+Deploy n8n
+↓
+Configure Gmail Credentials
+↓
+Activate Workflow
+📌 Future Enhancements
+Student Dashboard
+Request Tracking System
+WhatsApp Integration
+Payment Gateway Integration
+AI Academic Assistant
+User Authentication
+Admin Panel
+Project Status Tracking
+👨‍💻 Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Afjal Khan
 
-## Deploy on Vercel
+AI Developer | Full Stack Developer | Automation Enthusiast
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+GitHub: https://github.com/afjalk09
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+LinkedIn:https://www.linkedin.com/in/afjal-khan-b6ab76330/
+
+📄 License
+
+This project is developed for educational and commercial purposes.
+
+© 2026 Apna Platform. All Rights Reserved.
