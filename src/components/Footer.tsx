@@ -33,10 +33,10 @@ const footerLinks = {
     { label: "AI/ML Projects", href: "#services" },
   ],
   Contact: [
-    { label: "WhatsApp", href: "https://wa.me/919876543210" },
-    { label: "Email", href: "mailto:hello@apnaplatform.com" },
-    { label: "LinkedIn", href: "https://linkedin.com/company/apnaplatform" },
-    { label: "Instagram", href: "https://instagram.com/apna_platform" },
+    { label: "WhatsApp", href: "https://wa.me/7559127572" },
+    { label: "Email", href: "mailto:apnaplatform01@gmail.com" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/afjalkhan1704/" },
+    { label: "Instagram", href: "https://www.instagram.com/afzal.k27/" },
   ],
 };
 
@@ -63,10 +63,10 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               {[
-                { icon: MessageCircle, href: "https://wa.me/919876543210" },
-                { icon: Mail, href: "mailto:hello@apnaplatform.com" },
-                { icon: LinkedinIcon, href: "https://linkedin.com/company/apnaplatform" },
-                { icon: InstagramIcon, href: "https://instagram.com/apna_platform" },
+                { icon: MessageCircle, href: "https://wa.me/7559127572" },
+                { icon: Mail, href: "mailto:apnaplatform01@gmail.com" },
+                { icon: LinkedinIcon, href: "https://www.linkedin.com/in/afjalkhan1704/" },
+                { icon: InstagramIcon, href: "https://www.instagram.com/afzal.k27/" },
               ].map(({ icon: Icon, href }) => (
                 <a
                   key={href}

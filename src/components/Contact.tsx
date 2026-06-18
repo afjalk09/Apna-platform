@@ -49,6 +49,7 @@ export default function Contact() {
   e.preventDefault();
 
   try {
+    console.log("Webhook URL:", process.env.NEXT_PUBLIC_N8N_WEBHOOK);
     const response = await fetch(process.env.NEXT_PUBLIC_N8N_WEBHOOK!,
       {
         method: "POST",

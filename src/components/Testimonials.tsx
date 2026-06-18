@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Priya Sharma",
+    name: "Vilas Oza ",
     course: "B.Tech CSE, 3rd Year",
     review:
       "Apna Platform saved my semester! My AI project was delivered in just 3 days and it was absolutely top-notch. Highly recommended for all tech students.",
@@ -12,7 +12,7 @@ const testimonials = [
     initials: "PS",
   },
   {
-    name: "Rahul Verma",
+    name: "Shubham Sawant ",
     course: "MBA, 2nd Year",
     review:
       "The research paper they wrote for me was exactly what my professor wanted. Well-researched, properly cited, and delivered before the deadline. Thank you!",
@@ -20,7 +20,7 @@ const testimonials = [
     initials: "RV",
   },
   {
-    name: "Ananya Patel",
+    name: "Sejal Rai ",
     course: "B.Sc Computer Science",
     review:
       "I've used their PPT design service multiple times. The presentations look incredibly professional. My class presentations have never been better!",
@@ -28,7 +28,7 @@ const testimonials = [
     initials: "AP",
   },
   {
-    name: "Arjun Singh",
+    name: "Anjali Gupta",
     course: "B.Tech ME, 4th Year",
     review:
       "Final year project was stressing me out, but Apna Platform handled everything — from ideation to documentation. Got an A grade! Worth every penny.",
